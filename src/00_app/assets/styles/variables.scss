@@ -1,0 +1,56 @@
+:root {
+  --scale-xs: 0.5rem; /* 8px */
+  --scale-sm: 0.75rem; /* 12px */
+  --scale-md: 1rem; /* 16px */
+  --scale-lg: 1.25rem; /* 20px */
+  --scale-xl: 1.5rem; /* 24px */
+  --scale-2xl: 2rem; /* 32px */
+  --scale-3xl: 3rem; /* 48px */
+  --scale-4xl: 4rem; /* 64px */
+  --scale-5xl: 5rem; /* 80px */
+  --scale-6xl: 6rem; /* 96px */
+  --scale-7xl: 7rem; /* 112px */
+  --scale-8xl: 8rem; /* 128px */
+  --scale-9xl: 9rem; /* 144px */
+  --scale-10xl: 10rem; /* 160px */
+
+  /* Шрифты */
+  --app-font-family: "Inter", sans-serif;
+  --app-font-size: 16px;
+}
+
+$scale-variants: (
+  xs: var(--scale-xs),
+  sm: var(--scale-sm),
+  md: var(--scale-md),
+  lg: var(--scale-lg),
+  xl: var(--scale-xl),
+  2xl: var(--scale-2xl),
+  3xl: var(--scale-3xl),
+  4xl: var(--scale-4xl),
+  5xl: var(--scale-5xl),
+  6xl: var(--scale-6xl),
+  7xl: var(--scale-7xl),
+  8xl: var(--scale-8xl),
+  9xl: var(--scale-9xl),
+  10xl: var(--scale-10xl),
+  unset: unset,
+);
+$breakpoints: (
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+);
+$color-variants: (
+  primary: var(--color-primary),
+  secondary: var(--color-secondary),
+  success: var(--color-success),
+  error: var(--color-error),
+  info: var(--color-info),
+  warning: var(--color-warning),
+  muted: var(--color-muted),
+  unset: unset,
+);

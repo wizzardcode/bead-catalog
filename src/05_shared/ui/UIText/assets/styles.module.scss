@@ -1,0 +1,13 @@
+@use "@styles/mixins" as *;
+
+.text {
+  line-height: normal;
+
+  @include each-scale("s") using ($value) {
+    font-size: $value;
+  }
+
+  @include each-colors("c") using ($value) {
+    color: $value;
+  }
+}

@@ -1,0 +1,60 @@
+@use "@styles/mixins" as *;
+
+$active-effect: brightness(85%);
+
+.button {
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    outline 0.3s,
+    filter 0.3s,
+    color 0.1s;
+
+  @include each-scale("s") using ($value) {
+    padding: $value calc(#{$value} + #{$value});
+    font-size: $value;
+  }
+
+  @include each-scale("r") using ($value) {
+    border-radius: $value;
+  }
+
+  @include each-colors("c") using ($value) {
+    background-color: $value;
+    outline: 2px solid $value;
+    color: var(--color-light);
+
+    @include fill-variant {
+      &:hover {
+        background-color: transparent;
+        color: $value;
+      }
+
+      &:active {
+        background-color: $value;
+        filter: $active-effect;
+      }
+    }
+
+    @include outline-variant {
+      background-color: transparent;
+
+      &:hover {
+        background-color: $value;
+      }
+
+      &:active {
+        filter: $active-effect;
+      }
+    }
+
+    @include text-variant {
+      background-color: transparent;
+      outline: 0;
+
+      &:hover {
+        background-color: $value;
+      }
+    }
+  }
+}

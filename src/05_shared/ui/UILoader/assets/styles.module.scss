@@ -1,0 +1,28 @@
+@use "@styles/mixins" as *;
+
+.loader {
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  border-style: solid;
+
+  @include each-scale("s") using ($value) {
+    width: $value;
+    height: $value;
+    border-width: calc(#{$value} / 15);
+  }
+
+  @include each-colors("c") using ($value) {
+    border-color: var(--app-text-color);
+    border-top-color: $value;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

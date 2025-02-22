@@ -1,0 +1,16 @@
+@use "@styles/mixins" as *;
+
+.input {
+  @include each-scale("s") using ($value) {
+    font-size: $value;
+    padding: $value calc(#{$value} + #{$value});
+  }
+
+  @include each-colors("c") using ($value) {
+    background-color: $value;
+  }
+
+  @include each-scale("r") using ($value) {
+    border-radius: $value;
+  }
+}

@@ -1,0 +1,33 @@
+.light {
+  /* Основные цвета */
+  --color-primary: #0f0f0f;
+  --color-secondary: #efc643;
+  --color-success: #81c784;
+  --color-error: #ff8a80;
+  --color-warning: #ffb74d;
+  --color-info: #42a5f5;
+  --color-muted: #b5b5b5;
+  --color-dark: #333;
+  --color-light: #fff;
+
+  /* Цвета компонентов */
+  --app-background-color: #ffffff;
+  --app-text-color: #0f0f0f;
+}
+
+.dark {
+  /* Основные цвета */
+  --color-primary: #0f0f0f;
+  --color-secondary: #efc643;
+  --color-success: #81c784;
+  --color-error: #ff8a80;
+  --color-warning: #ffb74d;
+  --color-info: #42a5f5;
+  --color-muted: #a0a0a0;
+  --color-dark: #333;
+  --color-light: #fff;
+
+  /* Цвета компонентов */
+  --app-background-color: #0f0f0f;
+  --app-text-color: #ffffff;
+}

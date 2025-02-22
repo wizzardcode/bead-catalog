@@ -1,0 +1,12 @@
+@use "@styles/mixins" as *;
+
+.error {
+  display: flex;
+  align-items: center;
+  color: var(--color-error);
+
+  @include each-scale("s") using ($value) {
+    font-size: $value;
+    min-height: calc(#{$value} + #{$value});
+  }
+}

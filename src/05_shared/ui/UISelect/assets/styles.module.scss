@@ -1,0 +1,84 @@
+@use "@styles/mixins" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--color-primary);
+
+  @include each-colors("c") using ($value) {
+    background-color: $value;
+  }
+
+  @include each-scale("r") using ($value) {
+    border-radius: $value;
+  }
+
+  @include each-scale("s") using ($value) {
+    font-size: $value;
+    gap: $value;
+    padding: calc(#{$value} / 2) $value;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  z-index: 99999;
+  transition: max-height 0.1s;
+  max-height: 0;
+  scroll-margin-right: 40px;
+  overflow: hidden auto;
+
+  &.open {
+    max-height: 100px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: var(--scale-xs);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-light);
+    border-radius: var(--scale-xs);
+  }
+
+  @include each-scale("r") using ($value) {
+    border-radius: $value;
+  }
+}
+
+.menuButton {
+  padding: var(--scale-xs);
+  transition: filter 0.2s;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-light) !important;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+
+  &.active {
+    filter: brightness(80%);
+  }
+
+  @include each-colors("c") using ($value) {
+    background-color: $value;
+  }
+}

@@ -1,0 +1,30 @@
+@use "./variables";
+@use "./theme";
+@use "./fonts";
+@use "./animations";
+@use "swiper/scss";
+@use "swiper/scss/navigation";
+@use "swiper/scss/pagination";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
+body {
+  font-family: var(--app-font-family);
+  font-size: var(--app-font-size);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primary) !important;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+}

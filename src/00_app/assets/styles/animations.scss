@@ -1,0 +1,13 @@
+.animate-onset {
+  animation: onset 0.3s ease-in-out;
+}
+
+@keyframes onset {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

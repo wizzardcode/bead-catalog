@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["src/01_pages/*"],
+      "@widgets/*": ["src/02_widgets/*"],
+      "@entities/*": ["src/04_entities/*"],
+      "@features/*": ["src/03_features/*"],
+      "@uiKit": ["src/05_shared/ui"],
+      "@models/*": ["src/05_shared/models/*"],
+      "@config/*": ["src/05_shared/config/*"],
+      "@styles/*": ["src/01_app/assets/styles/*"],
+      "@hooks": ["src/05_shared/hooks"],
+      "@utils/*": ["src/05_shared/utils/*"]
+    }
+  },
+  "include": ["src"]
+}

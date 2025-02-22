@@ -1,0 +1,14 @@
+@use "@styles/mixins" as *;
+
+.checkbox {
+  cursor: pointer;
+
+  @include each-scale("s") using ($value) {
+    width: $value;
+    height: $value;
+  }
+
+  @include each-colors("c") using ($value) {
+    accent-color: $value;
+  }
+}

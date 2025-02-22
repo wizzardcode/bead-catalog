@@ -1,0 +1,8 @@
+@use "@styles/mixins" as *;
+
+.icon {
+  @include each-scale("s") using ($value) {
+    width: $value;
+    height: $value;
+  }
+}
