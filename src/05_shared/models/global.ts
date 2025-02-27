@@ -7,8 +7,19 @@ export const breakpoints = {
   "2xl": 1536,
 }
 
-export type ItemGender = "man" | "woman"
-export type ItemCategory = "bracelet" | "earring"
+export type ItemCategory =
+  | "bracelet"
+  | "earring"
+  | "ring"
+  | "tourniquet"
+  | "set"
+  | "necklace"
+
+export type FilterCategory = {
+  label: string
+  value: ItemCategory
+  src: string
+}
 
 export type CatalogItem = {
   id: number
@@ -17,10 +28,10 @@ export type CatalogItem = {
   category: ItemCategory
   price: number
   description: string
-  gender: ItemGender
   specifications: {
-    bead: string
-    zipper: string
-    length: number
+    bead: string | null
+    zipper: string | null
+    length: number | null
+    width: number | null
   }
 }

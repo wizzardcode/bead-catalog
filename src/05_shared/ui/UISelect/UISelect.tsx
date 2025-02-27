@@ -60,7 +60,7 @@ export const UISelect: FC<Props> = ({
 
   return (
     <div className={cnWrapper} onClick={handleToggleMenu}>
-      <button className={cnTrigger}>
+      <button className={cnTrigger} type="button">
         {currentIndex !== null ? options[currentIndex].label : title}
         <UIIcon
           className={classNames("transition-transform", {
@@ -78,6 +78,7 @@ export const UISelect: FC<Props> = ({
               [styles.active]: index === currentIndex,
             })}
             onClick={() => handleClickMenuButton(index)}
+            type="button"
             key={index}
           >
             {option.label}

@@ -20,4 +20,5 @@ export default defineConfig({
       "@utils": path.resolve(__dirname, "src/05_shared/utils"),
     },
   },
+  base: "https://wizzardcode.github.io/bead-catalog/",
 })

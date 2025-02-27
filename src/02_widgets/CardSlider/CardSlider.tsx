@@ -1,4 +1,5 @@
 import { ItemCategory } from "@models/global"
+import { useAdaptive } from "@uiKit"
 import { FC } from "react"
 import { Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -9,11 +10,12 @@ type Props = {
 }
 
 export const CardSlider: FC<Props> = ({ category, imgFolderName }) => {
+  const { isDesktop } = useAdaptive()
   const imagesArray = [
-    `/static/img/${category}/${imgFolderName}/0.jpg`,
-    `/static/img/${category}/${imgFolderName}/1.jpg`,
-    `/static/img/${category}/${imgFolderName}/2.jpg`,
-    `/static/img/${category}/${imgFolderName}/3.jpg`,
+    `/bead-catalog/static/img/${category}/${imgFolderName}/0.jpg`,
+    `/bead-catalog/static/img/${category}/${imgFolderName}/1.jpg`,
+    `/bead-catalog/static/img/${category}/${imgFolderName}/2.jpg`,
+    `/bead-catalog/static/img/${category}/${imgFolderName}/3.jpg`,
   ]
 
   return (
@@ -21,7 +23,7 @@ export const CardSlider: FC<Props> = ({ category, imgFolderName }) => {
       spaceBetween={20}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      navigation={true}
+      navigation={isDesktop}
       loop={true}
       effect="fade"
       modules={[Navigation, Pagination]}

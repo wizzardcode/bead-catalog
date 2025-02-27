@@ -9,7 +9,7 @@ type Props = {
 
 export const Catalog: FC<Props> = ({ items }) => {
   return (
-    <ul className={styles.catalog}>
+    <ul className={styles.catalog} id="catalog">
       {items.map((item) => (
         <li key={item.id}>
           <CatalogCard {...item} />

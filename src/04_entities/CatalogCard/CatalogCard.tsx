@@ -12,14 +12,14 @@ export const CatalogCard: FC<Props> = ({
   imgFolderName,
 }) => {
   return (
-    <Link className="w-min" to={`/${id}`}>
+    <Link to={`/catalog/${id}`}>
       <article
-        className="flex h-[500px] w-full flex-col items-center gap-2 overflow-hidden rounded-sm md:max-w-80"
+        className="flex w-full flex-col items-center gap-2 overflow-hidden rounded-sm"
         style={{ border: "1px solid var(--color-primary)" }}
       >
         <img
           className="h-[400px] w-full object-cover object-center transition hover:scale-105 hover:brightness-75"
-          src={`/static/img/${category}/${imgFolderName}/0.jpg`}
+          src={`/bead-catalog/static/img/${category}/${imgFolderName}/0.jpg`}
           alt={name}
         />
         <div className="flex flex-col items-center gap-1 p-5">

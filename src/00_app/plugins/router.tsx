@@ -17,7 +17,7 @@ export const router = createHashRouter([
       },
       /* Страница с карточкой товара */
       {
-        path: "/:id",
+        path: "/catalog/:id",
         element: <CatalogItemPage />,
       },
     ],
