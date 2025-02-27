@@ -21,6 +21,13 @@ export type FilterCategory = {
   src: string
 }
 
+export type ItemSpecifications = {
+  bead: string | null
+  zipper: string | null
+  length: number | null
+  width: number | null
+}
+
 export type CatalogItem = {
   id: number
   imgFolderName: string
@@ -28,10 +35,14 @@ export type CatalogItem = {
   category: ItemCategory
   price: number
   description: string
-  specifications: {
-    bead: string | null
-    zipper: string | null
-    length: number | null
-    width: number | null
-  }
+  specifications: ItemSpecifications
+}
+
+export enum ItemCategoryMap {
+  bracelet = "Браслет",
+  earring = "Серьги",
+  ring = "Кольцо",
+  tourniquet = "Жгут",
+  set = "Комплект",
+  necklace = "Ожерелье",
 }

@@ -74,6 +74,7 @@ export const CatalogFilters: FC<Props> = ({
     if (categoryValue === null) return
     sessionStorage.removeItem("activeFilter")
     setCategoryValue(null)
+    scrollToCatalog()
   }
 
   const handleFilter = () => {

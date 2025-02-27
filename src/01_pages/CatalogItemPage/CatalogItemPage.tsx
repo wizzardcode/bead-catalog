@@ -1,3 +1,4 @@
+import { CatalogSpecifications } from "@entities/CatalogSpecifications"
 import CATALOG from "@models/catalog.json"
 import { CatalogItem } from "@models/global"
 import { UIContainer, UIHeading, UILoader, UIText, useAdaptive } from "@uiKit"
@@ -79,26 +80,10 @@ export const CatalogItemPage: FC = () => {
             Характеристики:
           </UIHeading>
 
-          <ul>
-            <li className="flex justify-between border-b py-2">
-              <span>Длина браслета</span>
-              <span>Под ваше запястье</span>
-            </li>
-
-            {itemData.specifications.bead && (
-              <li className="flex justify-between border-b py-2">
-                <span>Материал</span>
-                <span>{itemData.specifications.bead}</span>
-              </li>
-            )}
-
-            {itemData.specifications.zipper && (
-              <li className="flex justify-between border-b py-2">
-                <span>Застежка</span>
-                <span>{itemData.specifications.zipper}</span>
-              </li>
-            )}
-          </ul>
+          <CatalogSpecifications
+            category={itemData.category}
+            specifications={itemData.specifications}
+          />
         </div>
       </div>
     </UIContainer>

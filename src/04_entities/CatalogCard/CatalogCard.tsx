@@ -1,4 +1,4 @@
-import { CatalogItem } from "@models/global"
+import { CatalogItem, ItemCategoryMap } from "@models/global"
 import { FC } from "react"
 import { Link } from "react-router"
 
@@ -23,7 +23,9 @@ export const CatalogCard: FC<Props> = ({
           alt={name}
         />
         <div className="flex flex-col items-center gap-1 p-5">
-          <span>{name}</span>
+          <span>
+            {ItemCategoryMap[category]} - {name}
+          </span>
           <span>{price.toLocaleString("ru")} ₽</span>
         </div>
       </article>

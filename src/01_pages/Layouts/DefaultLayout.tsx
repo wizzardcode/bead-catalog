@@ -15,7 +15,7 @@ export const DefaultLayout: FC = () => {
         )}
         <Link to="/">
           <UIHeading className="text-left font-bold" size="xl">
-            Название канала
+            Bead Catalog
           </UIHeading>
         </Link>
       </UIContainer>
